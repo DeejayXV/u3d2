@@ -83,7 +83,7 @@
         const h1 = document.querySelector("h1");
         h1.innerText = nuovoTitolo;
       };
-      changeTitle("New Titleee");
+      changeTitle("Questo è un nuovo titoloooo");
 
       /* ESERCIZIO 2
          Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
@@ -99,15 +99,14 @@
          Scrivi una funzione che cambi il testo dei p figli di un div
         */
 
-      // const changePcontent = function (div, p) {
-      //   const div = document.getElementsByClassName(div);
-      //   const par = div.querySelectorAll("p");
-      //   par.forEach(function (par) {
-      //     par.innerText = p;
-      //   });
-      // };
-      // changePcontent("div", "ciaoooooo");
-
+      const changePcontent = function (string) {
+        const sentence = document.querySelectorAll("div > p");
+        for (let index = 0; index < sentence.length; index++) {
+          const element = sentence[index];
+          element.innerText = string;
+        }
+      };
+      changePcontent("ciao a tutti! ciao a tutti! ciao a tutti! ciao a tutti!");
       // non funziona
 
       /* ESERCIZIO 4
@@ -199,7 +198,11 @@
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      // const generateTable = function () {
+      //   const tableArea = document.getElementById("tableArea")
+      //   const table = document.createElement("table")
+      //   const td = document.createElement("td")
+      // };
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -217,7 +220,13 @@
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
 
-      const changeColorWithRandom = function () {};
+      const changeColorWithRandom = function () {
+        const h2 = document.getElementById("changeMyColor");
+        const randomColor = Math.floor(Math.random());
+        h2.style.color = randomColor;
+      };
+      const h2 = document.getElementById("changeMyColor");
+      h2.addEventListener("click", cambiaColore);
     </script>
   </body>
 </html>
