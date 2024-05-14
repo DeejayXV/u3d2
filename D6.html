@@ -99,26 +99,40 @@
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
-      const changePcontent = function (div, p) {
-        const div = document.getElementsByClassName(div);
-        const par = div.querySelectorAll("p");
-        par.forEach(function (par) {
-          par.innerText = p;
-        });
-      };
-      changePcontent("div", "ciaoooooo");
+      // const changePcontent = function (div, p) {
+      //   const div = document.getElementsByClassName(div);
+      //   const par = div.querySelectorAll("p");
+      //   par.forEach(function (par) {
+      //     par.innerText = p;
+      //   });
+      // };
+      // changePcontent("div", "ciaoooooo");
+
+      // non funziona
 
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-      const changeUrls = function () {};
+      const changeUrls = function (newHref) {
+        const link = document.querySelectorAll("a:not(footer a)");
+        for (let index = 0; index < link.length; index++) {
+          link[index].href = newHref;
+        }
+      };
+      changeUrls("https://www.google.com");
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-      const addToTheSecond = function () {};
+      const addToTheSecond = function () {
+        const secondaLista = document.getElementById("secondList");
+        const newElement = document.createElement("li");
+        newElement.innerText = "new element list";
+        secondList.appendChild(newElement);
+      };
+      addToTheSecond();
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
