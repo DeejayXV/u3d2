@@ -186,6 +186,13 @@
         */
 
       const revealFooterLink = function () {};
+      const footer = document.querySelector("footer");
+      footer.addEventListener("click", function (par) {
+        par.preventDefault;
+        const url = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents";
+        alert("il link del è: " + url);
+      });
+      revealFooterLink();
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
